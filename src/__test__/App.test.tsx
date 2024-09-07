@@ -1,13 +1,13 @@
-import { render, screen } from "@testing-library/react";
-import App from "../App";
+import { render, screen } from '@testing-library/react'
+import App from '../App'
 
-describe("App Component", () => {
-  it("renders the paragraph correctly", () => {
-    render(<App />);
-    const paragraphElement = screen.getByText("ここのテスト");
-    expect(paragraphElement).toBeInTheDocument();
-  });
-});
+describe('App Component', () => {
+     it('renders the paragraph correctly', () => {
+          render(<App />)
+          const paragraphElement = screen.getByText('ここのテスト')
+          expect(paragraphElement).toBeInTheDocument()
+     })
+})
 
 // 出力値ベース・テスト
 // 出力値ベース・テストは、テスト対象に入力値を渡し、その出力を検査します。フロントエンドでは、
