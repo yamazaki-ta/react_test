@@ -5,11 +5,13 @@ type InputBoxProps= {
         inputValue:string,
         setInputValue:React.Dispatch<React.SetStateAction<string>>
     }
-    setInputValueTitle:React.Dispatch<React.SetStateAction<string>>
+    setInputValueTitle:React.Dispatch<React.SetStateAction<string|undefined>>
 }
 
 const InputBox = ({inputProps, setInputValueTitle}:InputBoxProps)=>{
-    const handleClick =()=>{ setInputValueTitle(inputProps.inputValue);}
+    const handleClick =()=>{
+        if(setInputValueTitle){
+        setInputValueTitle(inputProps.inputValue);}}
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         inputProps.setInputValue(e.target.value);
 
